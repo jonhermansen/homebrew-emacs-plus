@@ -23,9 +23,9 @@ matrix:
   fast_finish: true
 
 before_install:
-  - sw_vers
   - brew update
 
 script:
+  - sw_vers
   - travis_wait brew install Formula/emacs-plus.rb $BUILD_OPTIONS
   - brew test Formula/emacs-plus.rb
